@@ -1,5 +1,23 @@
 const passwordbox = document.getElementById("password");
 
+let eye = document.getElementById("openeye");
+
+let eyeState = "open"; // Initial state
+
+function openeye() {
+    if (eyeState === "open") {
+        eye.src = "eye-close.png";
+        passwordbox.type = "password";
+        eyeState = "close";
+    } else {
+        eye.src = "eye-open.png";
+        passwordbox.type = "text";
+        
+        eyeState = "open";
+    }
+}
+
+
 const length = 12 ; 
 
 const uppercase = "ABCDEFGHIJKMLMNOPQRSTUVWXY";
@@ -21,6 +39,9 @@ function generatePass(){
     }
 
     passwordbox.value = password;
+    eye.src = "eye-close.png" ;
+    eye.style.display = 'inline'
+
 }
 
 function copyPass(){
