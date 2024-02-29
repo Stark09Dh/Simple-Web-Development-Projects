@@ -29,6 +29,13 @@ body{
 
 }
 
+#openeye{
+    width: 40px;
+    margin: 0 18px 4px;
+    display: none;
+}
+
+
 .container h1{
     font-weight: 500;
     font-size: 45px;
@@ -43,7 +50,9 @@ body{
 
 .display img{
     width: 30px;
-    cursor: pointer;    
+    cursor: pointer; 
+    justify-content: space-between;  
+    margin-right: 10px; 
 }
 
 .display input{
